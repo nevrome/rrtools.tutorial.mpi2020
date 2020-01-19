@@ -10,6 +10,7 @@ output:
     self_contained: true
     thumbnails: false
     lightbox: false
+css: styles.css
 ---
 
 ```{r setup, include=FALSE}
