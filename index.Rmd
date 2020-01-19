@@ -15,6 +15,13 @@ css: styles.css
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(eval = FALSE)
+
+astro <- function() {
+  fontawesome::fa("user-astronaut", fill = "#c7254e", height = 30)
+}
+rocket <- function() {
+  fontawesome::fa("rocket", fill = "#c7254e", height = 30)
+}
 ```
 
 This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible research and data management at MPI-SHH](https://rrdm-shh.github.io) in January 2020. It's based on and inspired by two workshops prepared by [Ben Marwick](http://faculty.washington.edu/bmarwick/) for the [SAA2019 conference](https://benmarwick.github.io/2019-04-10-saa/) and [Brown University Digital Archaeology Lab](https://benmarwick.github.io/2019-12-09-brown/).
@@ -33,23 +40,47 @@ The term research compendium therefore covers a whole **range of imaginable degr
 
 # R for Reproducible Research
 
-Definition
+R (https://www.r-project.org/) is a **scripting language** and a framework for statistical data analysis. The way it is used for data analysis fits well to the research compendium concept. 
 
-## R
-
-Basic usage example to transport the idea of a scripting language with addon packages
+1. It is supported by an advanced working environment: **RStudio** 
+2. it allows for direct integration of code and text: **RMarkdown**
+3. It offers an established data structure to manage code, data and text: the **R package**
 
 ## RStudio
 
-What is an IDE + Try it out with RStudio Cloud
+RStudio (https://rstudio.com/products/rstudio/) is an integrated development environment (**IDE**) specifically designed for R. 
+
+Usually we would [install R and RStudio](https://benmarwick.github.io/2019-04-10-saa/#r) at this point and if you want to use these tools on your computer you should do so. For the purpose of this tutorial we will use an RStudio Cloud session, which allows us to use RStudio in a browser window. You can log in with your Github account: https://rstudio.cloud/project/848043
+
+`r astro()``r rocket()`
 
 ## R Markdown
 
 Text production with Markdown and R
 
+`r astro()``r rocket()`
+
 ## Package structure
 
-standardized directory structure
+http://r-pkgs.had.co.nz/
+
+```
+mypackage/
+|
+├── DESCRIPTION         # Package Metadata file
+├── R/                  # R code (files with functions)
+├── man/                # Object (mostly functions) documentation
+├── NAMESPACE/
+|
+├── vignettes/
+├── data/
+|
+├── tests/
+├── src/
+├── inst/
+|
+└─ .Rbuildignore/
+```
 
 # rrtools
 
