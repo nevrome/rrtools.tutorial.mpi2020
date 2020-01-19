@@ -6,19 +6,104 @@ author: Clemens Schmid
 date: 01/30/2020
 output:
   rmdformats::readthedown:
-    code_folding: hide
+    code_folding: NULL
     self_contained: true
     thumbnails: false
     lightbox: false
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
 # The Research Compendium
 
-test
+Definition
 
-# R Packages
+## Data + Code + Text
 
-test
+Elements of a research compendium
+
+# R for Reproducible Research
+
+Definition
+
+## R
+
+Basic usage example to transport the idea of a scripting language with addon packages
+
+## RStudio
+
+What is an IDE + Try it out with RStudio Cloud
+
+## R Markdown
+
+Text production with Markdown and R
+
+## Package structure
+
+standardized directory structure
 
 # rrtools
 
+Definition
+
+## Create an R package
+
+```{r}
+rrtools::use_compendium("pkgname")
+```
+
+## Activate version control
+
+```{r}
+usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+usethis::use_git()
+usethis::browse_github_pat()
+usethis::edit_r_environ()
+usethis::use_github(protocol = "https", private = FALSE)
+```
+
+## Establish the compendium file structure
+
+```{r}
+rrtools::use_analysis()
+```
+
+## Start writing
+
+Starting to write some text with RMarkdown
+
+# Advanced topics
+
+## README, Code of Conduct and Contribution
+
+```{r}
+rrtools::use_readme_rmd()
+```
+
+## Licensing
+
+```{r}
+usethis::use_mit_license(name = "My Name")
+```
+
+## CI/CD
+
+```{r}
+rrtools::use_travis(docker = FALSE)
+```
+
+## Virtualisation
+
+```{r}
+rrtools::use_dockerfile()
+```
+
+## Unit tests
+
+```{r}
+usethis::use_testthat()
+```
+
+# References
