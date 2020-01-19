@@ -60,6 +60,8 @@ If you never worked with R, you can use [swirl](https://swirlstats.com/students.
 
 ## R Markdown
 
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
 Text production with Markdown and R
 
 `r astro()``r rocket()`
