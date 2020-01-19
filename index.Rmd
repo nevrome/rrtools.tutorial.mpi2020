@@ -1,0 +1,24 @@
+---
+name: "rrtools.tutorial.mpi2020"
+title: ReproResearch MPI-SHH 2020
+output_dir: "."
+author: Clemens Schmid
+date: 01/30/2020
+output:
+  rmdformats::readthedown:
+    code_folding: hide
+    self_contained: true
+    thumbnails: false
+    lightbox: false
+---
+
+# The Research Compendium
+
+test
+
+# R Packages
+
+test
+
+# rrtools
+
