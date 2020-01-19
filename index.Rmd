@@ -62,6 +62,26 @@ If you never worked with R, you can use [swirl](https://swirlstats.com/students.
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
+Markdown is a lightweight and easy-to-use markup language for styling your writing. It includes a limited set of conventions:
+
+```
+Syntax highlighted code block like the one you see here. This page is written with markdown.
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
 Text production with Markdown and R
 
 `r astro()``r rocket()`
