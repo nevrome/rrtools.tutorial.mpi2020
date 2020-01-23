@@ -1,6 +1,5 @@
 ---
 name: "rrtools.tutorial.mpi2020"
-title: ReproResearch MPI-SHH 2020
 output_dir: "."
 author: Clemens Schmid
 date: January 2020
@@ -24,7 +23,11 @@ rocket <- function() {
 }
 ```
 
+# Reproducible Research 
+
 **url**
+
+![](Data-Managerment-title-slide-16-9.jpg)
 
 This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible research and data management at MPI-SHH](https://rrdm-shh.github.io) in January 2020. It's based on and inspired by two workshops prepared by [Ben Marwick](http://faculty.washington.edu/bmarwick/) for the [SAA2019 conference](https://benmarwick.github.io/2019-04-10-saa/) and [Brown University Digital Archaeology Lab](https://benmarwick.github.io/2019-12-09-brown/).
 
