@@ -1625,6 +1625,7 @@ border-top:solid 10px #3D3D3D;
 
 .gallery {
 display: flex;
+height: 90vh;
 overflow-x: scroll;
 scroll-snap-type: x mandatory;
 margin-top: 30px;
@@ -1632,7 +1633,6 @@ margin-bottom: 30px;
 }
 .gallery div {
 scroll-snap-align: start;
-height: 100%;
 min-width: 700px;
 justify-content: center;
 align-items: center;
@@ -1672,22 +1672,9 @@ $(document).ready(function () {
     <div id="table-of-contents">
       <ul>
       <li><a href="#the-research-compendium">The Research Compendium</a></li>
-      <li><a href="#r-for-reproducible-research">R for Reproducible Research</a>
-      <ul>
-      <li><a href="#rstudio">RStudio</a></li>
-      <li><a href="#r-markdown">R Markdown</a></li>
-      <li><a href="#r-packages">R Packages</a></li>
-      </ul></li>
+      <li><a href="#r-for-reproducible-research">R for Reproducible Research</a></li>
       <li><a href="#rrtools">rrtools</a></li>
-      <li><a href="#advanced-topics">Advanced topics</a>
-      <ul>
-      <li><a href="#long-term-data-storage">Long-term data storage</a></li>
-      <li><a href="#readme-code-of-conduct-and-contribution">README, Code of Conduct and Contribution</a></li>
-      <li><a href="#licensing">Licensing</a></li>
-      <li><a href="#virtualisation">Virtualisation</a></li>
-      <li><a href="#cicd">CI/CD</a></li>
-      <li><a href="#unit-tests">Unit tests</a></li>
-      </ul></li>
+      <li><a href="#advanced-aspects">Advanced aspects</a></li>
       <li><a href="#further-reading">Further reading</a></li>
       </ul>
     </div>
@@ -1704,7 +1691,7 @@ $(document).ready(function () {
 <p>This tutorial was compiled by <a href>Clemens Schmid</a> for a <a href="https://rrdm-shh.github.io">workshop on reproducible research and data management at MPI-SHH</a> in January 2020. It’s based on and inspired by two workshops prepared by <a href="http://faculty.washington.edu/bmarwick/">Ben Marwick</a> for the <a href="https://benmarwick.github.io/2019-04-10-saa/">SAA2019 conference</a> and <a href="https://benmarwick.github.io/2019-12-09-brown/">Brown University Digital Archaeology Lab</a>.</p>
 <div id="the-research-compendium" class="section level1">
 <h1>The Research Compendium</h1>
-<div class="gallery" style="height: 50vh;">
+<div class="gallery">
 <div>
 <blockquote>
 <p>A research compendium is a manuscript accompanied by code and data files (or persistent links to reputable online repositories) that allows reviewers and readers to reproduce and extend the results without needing any further materials from the original authors […].</p>
@@ -1732,57 +1719,39 @@ $(document).ready(function () {
 </div>
 <div id="r-for-reproducible-research" class="section level1">
 <h1>R for Reproducible Research</h1>
-<div class="container">
-<div>
+<div class="gallery">
+<div id="r" class="section level2">
+<h2>R</h2>
 <p><a href="https://www.r-project.org/">R</a> is a <strong>scripting language</strong> and a framework for statistical data analysis. The way it is used for data analysis fits well to the research compendium concept.</p>
-</div>
-<div>
 <ol style="list-style-type: decimal">
 <li>It is an easy to learn programming language with a huge community in science.</li>
 <li>It is supported by an advanced working environment: <strong>RStudio</strong></li>
 <li>it allows for direct integration of code and text: <strong>RMarkdown</strong></li>
 <li>It offers an established data structure to manage code, data and text: the <strong>R package</strong></li>
 </ol>
-</div>
-</div>
 <p>If you never worked with R, you can use <a href="https://swirlstats.com/students.html">swirl</a> to learn the basics.</p>
+</div>
 <div id="rstudio" class="section level2">
 <h2>RStudio</h2>
-<div class="container">
-<div>
 <p><a href="https://rstudio.com/products/rstudio/">RStudio</a> is an <strong>integrated development environment</strong> (IDE) specifically designed for R.</p>
-</div>
-<div>
 <p>Open RStudio or log into this RStudio Cloud session with your Github account: <a href="https://rstudio.cloud/project/848043" class="uri">https://rstudio.cloud/project/848043</a></p>
-</div>
-<div>
 <svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
 <path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
 </svg>
 <svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
 <path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
 </svg>
-</div>
-</div>
 </div>
 <div id="r-markdown" class="section level2">
 <h2>R Markdown</h2>
-<div class="container">
-<div>
 <p><a href="https://daringfireball.net/projects/markdown/">Markdown</a> is a lightweight and easy-to-use <strong>markup language</strong> for styling your writing. Text written in Markdown can easily converted to more advanced layout systems like HTML or LaTex. This website is written in Markdown.</p>
-</div>
-<div>
 <p><a href="https://rmarkdown.rstudio.com/">RMarkdown</a> is an advanced implementation of Markdown that allows to <strong>combine text and code</strong>. It adds the possibility to define chunks of code that run when the document is rendered.</p>
-</div>
-<div>
 <svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
 <path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
 </svg>
 <svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
 <path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
 </svg>
-</div>
-</div>
 <details>
 <pre><code>Syntax highlighted code block like the one you see here. This page is written with markdown.
 
@@ -1822,6 +1791,7 @@ $(document).ready(function () {
 <p><a href="http://r-pkgs.had.co.nz/">Here</a>’s an excellent introduction if you want to create your own package.</p>
 </div>
 </div>
+</div>
 <div id="rrtools" class="section level1">
 <h1>rrtools</h1>
 <div class="gallery">
@@ -1847,8 +1817,9 @@ $(document).ready(function () {
 </div>
 </div>
 </div>
-<div id="advanced-topics" class="section level1">
-<h1>Advanced topics</h1>
+<div id="advanced-aspects" class="section level1">
+<h1>Advanced aspects</h1>
+<div class="gallery">
 <div id="long-term-data-storage" class="section level2">
 <h2>Long-term data storage</h2>
 </div>
@@ -1871,6 +1842,7 @@ $(document).ready(function () {
 <div id="unit-tests" class="section level2">
 <h2>Unit tests</h2>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
+</div>
 </div>
 </div>
 <div id="further-reading" class="section level1">

@@ -70,6 +70,7 @@ a:visited{
 /* scroll gallery */
 .gallery {
 	display: flex;
+	height: 90vh;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
   margin-top: 30px;
@@ -78,7 +79,6 @@ a:visited{
 
 .gallery div {
   scroll-snap-align: start;
-  height: 100%;
   min-width: 700px;
   justify-content: center;
   align-items: center;
