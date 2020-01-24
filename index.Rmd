@@ -10,6 +10,8 @@ output:
     thumbnails: false
     lightbox: false
 css: styles.css
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -23,11 +25,11 @@ rocket <- function() {
 }
 ```
 
-# Reproducible Research 
+# Research Compendia with R
 
 **url**
 
-![](Data-Managerment-title-slide-16-9.jpg)
+![](figures/Data-Managerment-title-slide-16-9.jpg)
 
 This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible research and data management at MPI-SHH](https://rrdm-shh.github.io) in January 2020. It's based on and inspired by two workshops prepared by [Ben Marwick](http://faculty.washington.edu/bmarwick/) for the [SAA2019 conference](https://benmarwick.github.io/2019-04-10-saa/) and [Brown University Digital Archaeology Lab](https://benmarwick.github.io/2019-12-09-brown/).
 
@@ -37,11 +39,15 @@ This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible
 > 
 > -- Marwick 2017, 442.
 
-A research compendium contains relevant information to make the **scientific process** behind a book, book chapter or journal article **more transparent** and **reproducible**. Ideally it contains all **data**, **code** and **text** necessary to compile the published document.
+A research compendium contains **relevant information** to make the **scientific process** behind a book, book chapter or journal article **more transparent** and **reproducible**.
 
-This might be difficult sometimes due to raw data or text publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce.
+Reproducible means **computational reproducibility** in this context: Other researchers should be able to run our code with our data to **obtain exactly the same statistical results and data visualizations**. Computational reproducibility is an important foundation of scientific reproducibility and progress.
 
-The term research compendium therefore covers a whole **range of imaginable degrees of completeness**.
+A research compendium ideally contains **all** **data**, **code** and **text** necessary to compile the published document. This might be **difficult sometimes** due to raw data or text publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce. The term research compendium therefore covers a whole **range of imaginable degrees of completeness**.
+
+Research compendia can be compiled in many different ways. I will present **one particular workflow** and the software involved. The following figure by [Ben Marwick](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) illustrates one implementation.
+
+![](figures/marwick_workflow.png)
 
 # R for Reproducible Research
 
