@@ -3,6 +3,7 @@ name: "rrtools.tutorial.mpi2020"
 output_dir: "."
 author: Clemens Schmid
 date: January 2020
+title: Research Compendia with R
 output:
   rmdformats::readthedown:
     code_folding: NULL
@@ -25,8 +26,6 @@ rocket <- function() {
 }
 ```
 
-# Research Compendia with R
-
 **url**
 
 ![](figures/Data-Managerment-title-slide-16-9.jpg)
@@ -39,15 +38,28 @@ This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible
 > 
 > -- Marwick 2017, 442.
 
+<div class="container">
+
+<div>
 A research compendium contains **relevant information** to make the **scientific process** behind a book, book chapter or journal article **more transparent** and **reproducible**.
+</div>
 
+<div>
 Reproducible means **computational reproducibility** in this context: Other researchers should be able to run our code with our data to **obtain exactly the same statistical results and data visualizations**. Computational reproducibility is an important foundation of scientific reproducibility and progress.
+</div>
 
+<div>
 A research compendium ideally contains **all** **data**, **code** and **text** necessary to compile the published document. This might be **difficult sometimes** due to raw data or text publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce. The term research compendium therefore covers a whole **range of imaginable degrees of completeness**.
+</div>
 
+<div>
 Research compendia can be compiled in many different ways. I will present **one particular workflow** and the software involved. The following figure by [Ben Marwick](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) illustrates one implementation.
+</div>
+</div>
 
-![](figures/marwick_workflow.png)
+<img src="figures/marwick_workflow.png">
+
+
 
 # R for Reproducible Research
 

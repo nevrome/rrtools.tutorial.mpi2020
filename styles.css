@@ -53,3 +53,34 @@ a:visited{
     background:#3F88C5 !important;
     border-top:solid 10px #3D3D3D;
 }
+
+
+/* scroll container */
+.container {
+  width: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container div {
+  scroll-snap-align: start;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container div:nth-child(odd) {
+  background: #FCFCFC;
+  color: black;
+}
+
+.container div:nth-child(even) {
+  background: lightgrey;
+  color: black;
+}
