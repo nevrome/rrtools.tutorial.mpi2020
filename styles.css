@@ -1,21 +1,13 @@
 p {
-  font-size: 21px !important;
+  font-size: 20px !important;
 }
 
 li {
-  font-size: 21px !important;
+  font-size: 20px !important;
 }
 
 details {
-  font-size: 21px !important;
-}
-
-h1 {
-  margin-top: 100vh;
-}
-
-h2 {
-  margin-top: 100vh;
+  font-size: 20px !important;
 }
 
 #main .nav-pills > li.active > a,
@@ -77,7 +69,6 @@ a:visited{
 
 /* scroll gallery */
 .gallery {
-  height: 80vh;
 	display: flex;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
@@ -85,18 +76,10 @@ a:visited{
   margin-bottom: 30px;
 }
 
-.gallery h1 {
-  margin-top: 20px;
-}
-
-.gallery h2 {
-  margin-top: 20px;
-}
-
 .gallery div {
   scroll-snap-align: start;
-  height: 60vh;
-  width: 700px;
+  height: 100%;
+  min-width: 700px;
   justify-content: center;
   align-items: center;
   padding-left: 20px;
