@@ -1609,32 +1609,6 @@ background:#3F88C5 !important;
 border-top:solid 10px #3D3D3D;
 }
 
-.container {
-width: 100%;
-scroll-snap-type: y mandatory;
-overflow-y: scroll;
-height: 200px;
-margin-top: 30px;
-margin-bottom: 30px;
-}
-.container div {
-scroll-snap-align: start;
-height: 200px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding-left: 20px;
-padding-right: 20px;
-}
-.container div:nth-child(odd) {
-background: #FCFCFC;
-color: black;
-}
-.container div:nth-child(even) {
-background: lightgrey;
-color: black;
-}
-
 .gallery {
 height: 80vh;
 display: flex;
@@ -1716,16 +1690,20 @@ $(document).ready(function () {
 <p>This tutorial was compiled by <a href>Clemens Schmid</a> for a <a href="https://rrdm-shh.github.io">workshop on reproducible research and data management at MPI-SHH</a> in January 2020. It’s based on and inspired by two workshops prepared by <a href="http://faculty.washington.edu/bmarwick/">Ben Marwick</a> for the <a href="https://benmarwick.github.io/2019-04-10-saa/">SAA2019 conference</a> and <a href="https://benmarwick.github.io/2019-12-09-brown/">Brown University Digital Archaeology Lab</a>.</p>
 <div id="the-research-compendium" class="section level1">
 <h1>The Research Compendium</h1>
+<div class="gallery">
+<div>
+<h2 id="test">test</h2>
 <blockquote>
 <p>A research compendium is a manuscript accompanied by code and data files (or persistent links to reputable online repositories) that allows reviewers and readers to reproduce and extend the results without needing any further materials from the original authors […].</p>
 <p>– Marwick 2017, 442.</p>
 </blockquote>
-<div class="container">
+</div>
 <div>
 <p>A research compendium contains <strong>relevant information</strong> to make the <strong>scientific process</strong> behind a book, book chapter or journal article <strong>more transparent</strong> and <strong>reproducible</strong>.</p>
 </div>
 <div>
-<p>Reproducible means <strong>computational reproducibility</strong> in this context: Other researchers should be able to run our code with our data to <strong>obtain exactly the same statistical results and data visualizations</strong>. Computational reproducibility is an important foundation of scientific reproducibility and progress.</p>
+<p>Reproducible means <strong>computational reproducibility</strong> in this context:</p>
+<p>Other researchers should be able to run our code with our data to <strong>obtain exactly the same statistical results and data visualizations</strong>. Computational reproducibility is an important foundation of scientific reproducibility and progress.</p>
 </div>
 <div>
 <p>A research compendium ideally contains <strong>all</strong> <strong>data</strong>, <strong>code</strong> and <strong>text</strong> necessary to compile the published document. This might be <strong>difficult sometimes</strong> due to raw data or text publishing <strong>restrictions</strong> or parts of the workflow that are <strong>not quantitative</strong> or inherently impossible to reproduce. The term research compendium therefore covers a whole <strong>range of imaginable degrees of completeness</strong>.</p>

@@ -34,16 +34,24 @@ This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible
 
 # The Research Compendium
 
+<div class="gallery">
+<div>
+
+## test
+
 > A research compendium is a manuscript accompanied by code and data files (or persistent links to reputable online repositories) that allows reviewers and readers to reproduce and extend the results without needing any further materials from the original authors [...].
 > 
 > -- Marwick 2017, 442.
 
-<div class="container">
+</div>
 <div>
+
 A research compendium contains **relevant information** to make the **scientific process** behind a book, book chapter or journal article **more transparent** and **reproducible**.
 </div>
 <div>
-Reproducible means **computational reproducibility** in this context: Other researchers should be able to run our code with our data to **obtain exactly the same statistical results and data visualizations**. Computational reproducibility is an important foundation of scientific reproducibility and progress.
+Reproducible means **computational reproducibility** in this context: 
+
+Other researchers should be able to run our code with our data to **obtain exactly the same statistical results and data visualizations**. Computational reproducibility is an important foundation of scientific reproducibility and progress.
 </div>
 <div>
 A research compendium ideally contains **all** **data**, **code** and **text** necessary to compile the published document. This might be **difficult sometimes** due to raw data or text publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce. The term research compendium therefore covers a whole **range of imaginable degrees of completeness**.
