@@ -1,3 +1,7 @@
+p {
+  font-size: 23px !important;
+}
+
 #main .nav-pills > li.active > a,
 #main .nav-pills > li.active > a:hover,
 #main .nav-pills > li.active > a:focus {
