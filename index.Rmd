@@ -53,13 +53,15 @@ Research compendia can be compiled in many different ways. I will present **one 
 </div>
 </div>
 
+<details>
 <img src="figures/marwick_workflow.png">
+</details>
 
 # R for Reproducible Research
 
 <div class="container">
 <div>
-R (https://www.r-project.org/) is a **scripting language** and a framework for statistical data analysis. The way it is used for data analysis fits well to the research compendium concept. 
+[R](https://www.r-project.org/) is a **scripting language** and a framework for statistical data analysis. The way it is used for data analysis fits well to the research compendium concept. 
 </div>
 <div>
 1. It is an easy to learn programming language with a huge community in science.
@@ -69,11 +71,13 @@ R (https://www.r-project.org/) is a **scripting language** and a framework for s
 </div>
 </div>
 
+If you never worked with R, you can use [swirl](https://swirlstats.com/students.html) to learn the basics.
+
 ## RStudio
 
 <div class="container">
 <div>
-RStudio (https://rstudio.com/products/rstudio/) is an integrated development environment (**IDE**) specifically designed for R. 
+[RStudio](https://rstudio.com/products/rstudio/) is an **integrated development environment** (IDE) specifically designed for R. 
 </div>
 <div>
 Open RStudio or log into this RStudio Cloud session with your Github account: https://rstudio.cloud/project/848043
@@ -83,8 +87,6 @@ Open RStudio or log into this RStudio Cloud session with your Github account: ht
 </div>
 </div>
 
-If you never worked with R, you can use [swirl](https://swirlstats.com/students.html) to learn the basics.
-
 ## R Markdown
 
 <div class="container">
@@ -92,14 +94,14 @@ If you never worked with R, you can use [swirl](https://swirlstats.com/students.
 [Markdown](https://daringfireball.net/projects/markdown/) is a lightweight and easy-to-use **markup language** for styling your writing. Text written in Markdown can easily converted to more advanced layout systems like HTML or LaTex. This website is written in Markdown.
 </div>
 <div>
-[RMarkdown](https://rmarkdown.rstudio.com/) is an advanced implementation of Markdown that allows to combine text and code. It adds the possibility to add chunks of code that run when the document is rendered.
+[RMarkdown](https://rmarkdown.rstudio.com/) is an advanced implementation of Markdown that allows to **combine text and code**. It adds the possibility to define chunks of code that run when the document is rendered.
 </div>
 <div>
 `r astro()``r rocket()`
 </div>
 </div>
 
-
+<details>
 ```
 Syntax highlighted code block like the one you see here. This page is written with markdown.
 
@@ -119,10 +121,9 @@ Syntax highlighted code block like the one you see here. This page is written wi
 ```
 
 [Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)'s a cheatsheet that documents all basic Markdown features.
+</details>
 
 ## R Packages
-
-http://r-pkgs.had.co.nz/
 
 ```
 mypackage/
@@ -142,9 +143,13 @@ mypackage/
 └─ .Rbuildignore/
 ```
 
+[Here](http://r-pkgs.had.co.nz/)'s an excellent introduction if you want to create your own package.
+
 # rrtools
 
-Definition
+<div class="gallery">
+
+<div>
 
 ## Create an R package
 
@@ -152,6 +157,9 @@ Definition
 rrtools::use_compendium("pkgname")
 ```
 
+</div>
+
+<div>
 ## Activate version control
 
 ```{r}
@@ -161,6 +169,9 @@ usethis::browse_github_pat()
 usethis::edit_r_environ()
 usethis::use_github(protocol = "https", private = FALSE)
 ```
+</div>
+
+<div>
 
 ## Establish the compendium file structure
 
@@ -168,9 +179,19 @@ usethis::use_github(protocol = "https", private = FALSE)
 rrtools::use_analysis()
 ```
 
+</div>
+
+<div>
+
 ## Start writing
 
 Starting to write some text with RMarkdown
+
+</div>
+
+</div>
+
+
 
 # Advanced topics
 
