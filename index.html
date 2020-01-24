@@ -1630,6 +1630,9 @@ overflow-x: scroll;
 scroll-snap-type: x mandatory;
 margin-top: 30px;
 margin-bottom: 30px;
+border-style: solid;
+border-width: 1px;
+border-color: lightgrey;
 }
 .gallery div {
 scroll-snap-align: start;
@@ -1692,24 +1695,28 @@ $(document).ready(function () {
 <div id="the-research-compendium" class="section level1">
 <h1>The Research Compendium</h1>
 <div class="gallery">
-<div>
+<div id="preliminary-considerations" class="section level2">
+<h2>Preliminary considerations</h2>
+</div>
+<div id="idea" class="section level2">
+<h2>Idea</h2>
 <blockquote>
 <p>A research compendium is a manuscript accompanied by code and data files (or persistent links to reputable online repositories) that allows reviewers and readers to reproduce and extend the results without needing any further materials from the original authors […].</p>
 <p>– Marwick 2017, 442.</p>
 </blockquote>
-</div>
-<div>
 <p>A research compendium contains <strong>relevant information</strong> to make the <strong>scientific process</strong> behind a book, book chapter or journal article <strong>more transparent</strong> and <strong>reproducible</strong>.</p>
 <p>Reproducible means <strong>computational reproducibility</strong> in this context:</p>
 <p>Other researchers should be able to run our code with our data to <strong>obtain exactly the same statistical results and data visualizations</strong>.</p>
 <p>Computational reproducibility is an important foundation of scientific reproducibility and progress.</p>
 </div>
-<div>
+<div id="scope" class="section level2">
+<h2>Scope</h2>
 <p>A research compendium ideally contains <strong>all</strong> <strong>data</strong>, <strong>code</strong> and <strong>text</strong> necessary to compile the published document.</p>
 <p>This might be <strong>difficult sometimes</strong> due to raw data or text publishing <strong>restrictions</strong> or parts of the workflow that are <strong>not quantitative</strong> or inherently impossible to reproduce.</p>
 <p>The term research compendium therefore covers a whole <strong>range of imaginable degrees of completeness</strong>.</p>
 </div>
-<div>
+<div id="what-we-will-do-today" class="section level2">
+<h2>What we will do today</h2>
 <p>Research compendia can be compiled in many different ways. I will present <strong>one particular workflow</strong> and the software involved. The following figure by <a href="https://www.practicereproducibleresearch.org/case-studies/benmarwick.html">Ben Marwick</a> illustrates one implementation.</p>
 </div>
 </div>
