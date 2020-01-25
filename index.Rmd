@@ -26,7 +26,8 @@ rocket <- function() {
 }
 ```
 
-**url**
+[**https://nevrome.github.io/rrtools.tutorial.mpi2020**](https://nevrome.github.io/rrtools.tutorial.mpi2020)  
+Github: https://github.com/nevrome/rrtools.tutorial.mpi2020
 
 ![](figures/Data-Managerment-title-slide-16-9.jpg)
 
