@@ -1675,7 +1675,7 @@ $(document).ready(function () {
     <div id="table-of-contents">
       <ul>
       <li><a href="#the-research-compendium">The Research Compendium</a></li>
-      <li><a href="#r-for-reproducible-research">R for Reproducible Research</a></li>
+      <li><a href="#r-for-reproducible-research">R for reproducible research</a></li>
       <li><a href="#rrtools">rrtools</a></li>
       <li><a href="#advanced-aspects">Advanced aspects</a></li>
       <li><a href="#further-reading">Further reading</a></li>
@@ -1725,7 +1725,7 @@ $(document).ready(function () {
 </details>
 </div>
 <div id="r-for-reproducible-research" class="section level1">
-<h1>R for Reproducible Research</h1>
+<h1>R for reproducible research</h1>
 <div class="gallery">
 <div id="r" class="section level2">
 <h2>R</h2>
@@ -1805,6 +1805,16 @@ $(document).ready(function () {
 <div id="create-an-r-package" class="section level2">
 <h2>Create an R package</h2>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>rrtools<span class="op">::</span><span class="kw">use_compendium</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
+<p>This uses <code>usethis::create_package()</code> to create a basic R package with the name <code>pkgname</code>, and then, if you’re using RStudio, opens the project.</p>
+<p>ToDo:</p>
+<ul>
+<li>choose a location for the compendium package and run <code>rrtools::use_compendium()</code> (e.g. <code>rrtools::use_compendium(&quot;C:/Users/bmarwick/Desktop/pkgname&quot;)</code>).</li>
+<li>edit the <code>DESCRIPTION</code> file (located in your <code>pkgname</code> directory) to include accurate metadata</li>
+</ul>
+<p>Keep in mind:</p>
+<ul>
+<li>periodically update the <code>Imports:</code> section of the <code>DESCRIPTION</code> file with the names of packages used in the code we write in the Rmd document(s) (e.g., <code>usethis::use_package(&quot;dplyr&quot;, &quot;imports&quot;)</code>)</li>
+</ul>
 </div>
 <div id="activate-version-control" class="section level2">
 <h2>Activate version control</h2>

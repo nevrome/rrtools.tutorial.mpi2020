@@ -180,6 +180,17 @@ mypackage/
 rrtools::use_compendium("pkgname")
 ```
 
+This uses `usethis::create_package()` to create a basic R package with the name `pkgname`, and then, if you’re using RStudio, opens the project. 
+
+ToDo:
+
+- choose a location for the compendium package and run `rrtools::use_compendium()` (e.g. `rrtools::use_compendium("C:/Users/bmarwick/Desktop/pkgname")`).
+- edit the `DESCRIPTION` file (located in your `pkgname` directory) to include accurate metadata
+    
+Keep in mind for the future:
+
+- periodically update the `Imports:` section of the `DESCRIPTION` file with the names of packages used in the code we write in the Rmd document(s) (e.g., `usethis::use_package("dplyr", "imports")`)
+
 </div>
 <div>
 
