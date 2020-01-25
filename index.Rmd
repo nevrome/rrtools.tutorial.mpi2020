@@ -204,6 +204,18 @@ usethis::edit_r_environ()
 usethis::use_github(protocol = "https", private = FALSE)
 ```
 
+If you are connected to the internet, this initializes a local git repository (`use_git()`), then `use_github()` connects to [GitHub](https://github.com), and creates a remote repository 
+
+ToDo:
+
+- install and configure git *before* running this line. See [Happy Git With R](http://happygitwithr.com) for details on how to do this. Make sure to set up a [SSH key](https://happygitwithr.com/ssh-keys.html) to connect to your Github account conveniently.
+- get a [personal access token](https://github.com/settings/tokens), and replace “xxxx” with that token. See the [usethis](https://usethis.r-lib.org/articles/articles/usethis-setup.html#get-and-store-a-github-personal-access-token) documentation for an easy method to get this token. When you do so (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere.
+- Reopen your project in RStudio to see the git buttons on the toolbar.
+
+Keep in mind for the future:
+
+- Commit and push your changes to Github.
+
 </div>
 <div>
 

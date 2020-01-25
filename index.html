@@ -1641,6 +1641,7 @@ justify-content: center;
 align-items: center;
 padding-left: 20px;
 padding-right: 20px;
+margin-right: 20px;
 }
 </style>
 
@@ -1811,7 +1812,7 @@ $(document).ready(function () {
 <li>choose a location for the compendium package and run <code>rrtools::use_compendium()</code> (e.g. <code>rrtools::use_compendium(&quot;C:/Users/bmarwick/Desktop/pkgname&quot;)</code>).</li>
 <li>edit the <code>DESCRIPTION</code> file (located in your <code>pkgname</code> directory) to include accurate metadata</li>
 </ul>
-<p>Keep in mind:</p>
+<p>Keep in mind for the future:</p>
 <ul>
 <li>periodically update the <code>Imports:</code> section of the <code>DESCRIPTION</code> file with the names of packages used in the code we write in the Rmd document(s) (e.g., <code>usethis::use_package(&quot;dplyr&quot;, &quot;imports&quot;)</code>)</li>
 </ul>
@@ -1823,6 +1824,17 @@ $(document).ready(function () {
 <span id="cb4-3"><a href="#cb4-3"></a>usethis<span class="op">::</span><span class="kw">browse_github_pat</span>()</span>
 <span id="cb4-4"><a href="#cb4-4"></a>usethis<span class="op">::</span><span class="kw">edit_r_environ</span>()</span>
 <span id="cb4-5"><a href="#cb4-5"></a>usethis<span class="op">::</span><span class="kw">use_github</span>(<span class="dt">protocol =</span> <span class="st">&quot;https&quot;</span>, <span class="dt">private =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<p>If you are connected to the internet, this initializes a local git repository (<code>use_git()</code>), then <code>use_github()</code> connects to <a href="https://github.com">GitHub</a>, and creates a remote repository</p>
+<p>ToDo:</p>
+<ul>
+<li>install and configure git <em>before</em> running this line. See <a href="http://happygitwithr.com">Happy Git With R</a> for details on how to do this. Make sure to set up a <a href="https://happygitwithr.com/ssh-keys.html">SSH key</a> to connect to your Github account conveniently.</li>
+<li>get a <a href="https://github.com/settings/tokens">personal access token</a>, and replace “xxxx” with that token. See the <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html#get-and-store-a-github-personal-access-token">usethis</a> documentation for an easy method to get this token. When you do so (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere.</li>
+<li>Reopen your project in RStudio to see the git buttons on the toolbar.</li>
+</ul>
+<p>Keep in mind for the future:</p>
+<ul>
+<li>Commit and push your changes to Github.</li>
+</ul>
 </div>
 <div id="establish-the-compendium-file-structure" class="section level2">
 <h2>Establish the compendium file structure</h2>
