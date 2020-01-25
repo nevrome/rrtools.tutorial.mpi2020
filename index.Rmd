@@ -90,12 +90,14 @@ Other researchers should at least be able to run our script with our data to **o
 
 Research compendia can be compiled in many different ways. 
 
-I will present **one particular workflow** and the software involved. 
+I will present **one particular workflow** based on our R package [rrtools](https://github.com/benmarwick/rrtools). 
+
+![](figures/screenshot_rrtools.png)
+
+</div>
+</div>
 
 The following figure by [Marwick 2017](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) illustrates one implementation of this workflow.
-
-</div>
-</div>
 
 <details>
 <img src="figures/marwick_workflow.png">
@@ -133,16 +135,13 @@ Open RStudio or log into this RStudio Cloud session with your Github account: ht
 
 ## R Markdown
 
-[Markdown](https://daringfireball.net/projects/markdown/) is a lightweight and easy-to-use **markup language** for styling your writing. Text written in Markdown can easily converted to more advanced layout systems like HTML or LaTex. This website is written in Markdown.
+[Markdown](https://daringfireball.net/projects/markdown/) is a lightweight and easy-to-use **markup language** for styling your writing. 
 
-[RMarkdown](https://rmarkdown.rstudio.com/) is an advanced implementation of Markdown that allows to **combine text and code**. It adds the possibility to define chunks of code that run when the document is rendered.
+Text written in Markdown can **easily converted** to more advanced layout systems like HTML or LaTex. This website is written in Markdown.
 
-`r astro()``r rocket()`
+[Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)'s a cheatsheet that documents all basic Markdown features.
 
-<details>
 ```
-Syntax highlighted code block like the one you see here. This page is written with markdown.
-
 # Header 1
 ## Header 2
 ### Header 3
@@ -158,13 +157,20 @@ Syntax highlighted code block like the one you see here. This page is written wi
 [Link](url) and ![Image](src)
 ```
 
-[Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)'s a cheatsheet that documents all basic Markdown features.
-</details>
+[RMarkdown](https://rmarkdown.rstudio.com/) is an advanced implementation of Markdown that allows to **combine text and code**. It adds the possibility to define chunks of code that run when the document is rendered.
+
+`r astro()``r rocket()`
 
 </div>
 <div>
 
 ## R Packages
+
+R packages are a core feature of R. They contain **ready to use functions, documentation and example data**. 
+
+There currently are **>15000 R packages** mostly written and maintained by **volunteers** for all sorts of research questions and applications. 
+
+They have an established **standard structure**:
 
 ```
 mypackage/
@@ -172,7 +178,7 @@ mypackage/
 ├── DESCRIPTION         # Package Metadata file
 ├── R/                  # R code (files with functions)
 ├── man/                # Object (mostly functions) documentation
-├── NAMESPACE/
+├── NAMESPACE/          # 
 |
 ├── vignettes/
 ├── data/
