@@ -37,11 +37,6 @@ This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible
 <div class="gallery">
 <div>
 
-## Preliminary considerations
-
-</div>
-<div>
-
 ## Idea
 
 > A research compendium is a manuscript accompanied by code and data files (or persistent links to reputable online repositories) that allows reviewers and readers to reproduce and extend the results without needing any further materials from the original authors [...].
@@ -50,18 +45,7 @@ This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible
 
 A research compendium contains **relevant information** to make the **scientific process** behind a book, book chapter or journal article **more transparent** and **reproducible**.
 
-Reproducible means **computational reproducibility** in this context: 
-
-Other researchers should be able to run our code with our data to **obtain exactly the same statistical results and data visualizations**. 
-
-Computational reproducibility is an important foundation of scientific reproducibility and progress.
-
-</div>
-<div>
-
-## Scope
-
-A research compendium ideally contains **all** **data**, **code** and **text** necessary to compile the published document. 
+Ideally it contains **all** **data**, **code** and **text** necessary to compile the published document. 
 
 This might be **difficult sometimes** due to raw data or text publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce. 
 
@@ -70,9 +54,45 @@ The term research compendium therefore covers a whole **range of imaginable degr
 </div>
 <div>
 
+## Data
+
+Research can only be **reproduced**, **checked** and **expanded** when underlying raw data is available.
+
+Data sharing is a **moral obligation** and **non-trivial**. Marwick & Birch 2018 have some recommendations:
+
+- Anticipate how your data will be used
+- Keep raw data **raw**
+- Store data in **open formats**
+- Data should be structured for analysis (**tidy data**)
+- Data should be uniquely identifiable (**persistent references**)
+- Provide relevant **metadata**
+- Adopt the proper **privacy** protocols
+- Use a trustworthy **repository**
+- Use an open **license**
+
+</div>
+<div>
+
+## Code
+
+In most contexts of **quantitative research** data analysis can be expressed in the form of a **computer script**.
+
+Other researchers should at least be able to run our script with our data to **obtain exactly the same statistical results and data visualizations**. 
+
+**Computational reproducibility** is an important foundation of scientific progress, that requires a **new type of researcher**:
+
+![](figures/marwick_T_Pi_researcher.png)
+
+</div>
+<div>
+
 ## What we will do today
 
-Research compendia can be compiled in many different ways. I will present **one particular workflow** and the software involved. The following figure by [Ben Marwick](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) illustrates one implementation.
+Research compendia can be compiled in many different ways. 
+
+I will present **one particular workflow** and the software involved. 
+
+The following figure by [Marwick 2017](https://www.practicereproducibleresearch.org/case-studies/benmarwick.html) illustrates one implementation of this workflow.
 
 </div>
 </div>
