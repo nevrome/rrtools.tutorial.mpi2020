@@ -1677,8 +1677,9 @@ $(document).ready(function () {
       <ul>
       <li><a href="#the-research-compendium">The Research Compendium</a></li>
       <li><a href="#r-for-reproducible-research">R for reproducible research</a></li>
-      <li><a href="#rrtools">rrtools</a></li>
-      <li><a href="#advanced-aspects">Advanced aspects</a></li>
+      <li><a href="#rrtools-setup">rrtools setup</a></li>
+      <li><a href="#rrtools-workflow">rrtools workflow</a></li>
+      <li><a href="#rrtools-advanced">rrtools advanced</a></li>
       <li><a href="#further-reading">Further reading</a></li>
       </ul>
     </div>
@@ -1784,7 +1785,7 @@ $(document).ready(function () {
 
 **Bold** and _Italic_ and `Code` text or [Link](url) and ![Image](src)</code></pre>
 <p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Here</a>’s a cheatsheet that documents all basic Markdown features.</p>
-<p>Text written in Markdown can <strong>easily converted</strong> to more advanced layout systems like HTML or LaTex. This website is written in Markdown.</p>
+<p>Text written in Markdown can <strong>easily converted</strong> to more advanced layout systems like HTML or LaTex or MS Word. This website is written in Markdown.</p>
 <p><a href="https://rmarkdown.rstudio.com/">RMarkdown</a> is an advanced implementation of Markdown that allows to <strong>combine text and code</strong>. It adds the possibility to define chunks of code that run when the document is rendered.</p>
 <svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
 <path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
@@ -1814,77 +1815,118 @@ $(document).ready(function () {
 </div>
 </div>
 </div>
-<div id="rrtools" class="section level1">
-<h1>rrtools</h1>
+<div id="rrtools-setup" class="section level1">
+<h1>rrtools setup</h1>
 <div class="gallery">
 <div id="create-an-r-package" class="section level2">
 <h2>Create an R package</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>rrtools<span class="op">::</span><span class="kw">use_compendium</span>(<span class="st">&quot;pkgname&quot;</span>)</span></code></pre></div>
-<p>This uses <code>usethis::create_package()</code> to create a basic R package with the name <code>pkgname</code>, and then, if you’re using RStudio, opens the project.</p>
-<p>ToDo:</p>
-<ul>
-<li>choose a location for the compendium package and run <code>rrtools::use_compendium()</code> (e.g. <code>rrtools::use_compendium(&quot;C:/Users/bmarwick/Desktop/pkgname&quot;)</code>).</li>
-<li>edit the <code>DESCRIPTION</code> file (located in your <code>pkgname</code> directory) to include accurate metadata</li>
-</ul>
-<p>Keep in mind for the future:</p>
-<ul>
-<li>periodically update the <code>Imports:</code> section of the <code>DESCRIPTION</code> file with the names of packages used in the code we write in the Rmd document(s) (e.g., <code>usethis::use_package(&quot;dplyr&quot;, &quot;imports&quot;)</code>)</li>
-</ul>
+<p>If rrtools is installed on your system you can start immediately to use it in R.</p>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>run <code>rrtools::use_compendium(&quot;path/to/your/project&quot;)</code> to create a basic R package with the name <code>project</code></p>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>edit the <code>DESCRIPTION</code> file (located in your <code>project</code> directory) to include accurate metadata</p>
+<p>For the future keep in mind to periodically update the <code>Imports:</code> section of the <code>DESCRIPTION</code> file with the names of packages used in the code we write in the Rmd document(s)</p>
 </div>
 <div id="activate-version-control" class="section level2">
 <h2>Activate version control</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>usethis<span class="op">::</span><span class="kw">use_git_config</span>(<span class="dt">user.name =</span> <span class="st">&quot;Jane Doe&quot;</span>, <span class="dt">user.email =</span> <span class="st">&quot;jane@example.com&quot;</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>usethis<span class="op">::</span><span class="kw">use_git</span>()</span>
-<span id="cb5-3"><a href="#cb5-3"></a>usethis<span class="op">::</span><span class="kw">browse_github_pat</span>()</span>
-<span id="cb5-4"><a href="#cb5-4"></a>usethis<span class="op">::</span><span class="kw">edit_r_environ</span>()</span>
-<span id="cb5-5"><a href="#cb5-5"></a>usethis<span class="op">::</span><span class="kw">use_github</span>(<span class="dt">protocol =</span> <span class="st">&quot;https&quot;</span>, <span class="dt">private =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
-<p>If you are connected to the internet, this initializes a local git repository (<code>use_git()</code>), then <code>use_github()</code> connects to <a href="https://github.com">GitHub</a>, and creates a remote repository</p>
-<p>ToDo:</p>
-<ul>
-<li>install and configure git <em>before</em> running this line. See <a href="http://happygitwithr.com">Happy Git With R</a> for details on how to do this. Make sure to set up a <a href="https://happygitwithr.com/ssh-keys.html">SSH key</a> to connect to your Github account conveniently.</li>
-<li>get a <a href="https://github.com/settings/tokens">personal access token</a>, and replace “xxxx” with that token. See the <a href="https://usethis.r-lib.org/articles/articles/usethis-setup.html#get-and-store-a-github-personal-access-token">usethis</a> documentation for an easy method to get this token. When you do so (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere.</li>
-<li>Reopen your project in RStudio to see the git buttons on the toolbar.</li>
-</ul>
-<p>Keep in mind for the future:</p>
-<ul>
-<li>Commit and push your changes to Github.</li>
-</ul>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>run <code>usethis::use_git_config(user.name = &quot;&quot;, user.email = &quot;&quot;)</code> to configure git for this user/project</p>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>run <code>usethis::use_git()</code> to initiate git for this project (<code>git init</code>)</p>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>run <code>usethis::browse_github_pat()</code> to get to the right page to create a github access token. This access token is needed to control github remotely. When you generate the token (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere</p>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>run <code>usethis::use_github(protocol = &quot;https&quot;, auth_token = &quot;your token&quot;)</code> to create a repository for your local project on Github</p>
 </div>
 <div id="establish-the-compendium-file-structure" class="section level2">
 <h2>Establish the compendium file structure</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>rrtools<span class="op">::</span><span class="kw">use_analysis</span>()</span></code></pre></div>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>run <code>rrtools::use_analysis()</code> to create the basic files and directory structure and transform this R package into a research compendium</p>
+<pre><code>analysis/
+|
+├── paper/
+│   ├── paper.Rmd       # this is the main document to edit
+│   └── references.bib  # this contains the reference list information
+│
+├── figures/            # location of the figures produced by the Rmd
+|
+├── data/
+│   ├── raw_data/       # data obtained from elsewhere
+│   └── derived_data/   # data generated during the analysis
+|
+└── templates
+    ├── journal-of-archaeological-science.csl
+    |                   # this sets the style of citations &amp; reference list
+    ├── template.docx   # used to style the output of the paper.Rmd
+    └── template.Rmd</code></pre>
 </div>
-<div id="start-writing" class="section level2">
-<h2>Start writing</h2>
-<p>Starting to write some text with RMarkdown</p>
 </div>
 </div>
-</div>
-<div id="advanced-aspects" class="section level1">
-<h1>Advanced aspects</h1>
+<div id="rrtools-workflow" class="section level1">
+<h1>rrtools workflow</h1>
 <div class="gallery">
-<div id="long-term-data-storage" class="section level2">
-<h2>Long-term data storage</h2>
+<div>
+
 </div>
+</div>
+</div>
+<div id="rrtools-advanced" class="section level1">
+<h1>rrtools advanced</h1>
+<div class="gallery">
 <div id="readme-code-of-conduct-and-contribution" class="section level2">
 <h2>README, Code of Conduct and Contribution</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>rrtools<span class="op">::</span><span class="kw">use_readme_rmd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>rrtools<span class="op">::</span><span class="kw">use_readme_rmd</span>()</span></code></pre></div>
 </div>
 <div id="licensing" class="section level2">
 <h2>Licensing</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>usethis<span class="op">::</span><span class="kw">use_mit_license</span>(<span class="dt">name =</span> <span class="st">&quot;My Name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>usethis<span class="op">::</span><span class="kw">use_mit_license</span>(<span class="dt">name =</span> <span class="st">&quot;My Name&quot;</span>)</span></code></pre></div>
 </div>
 <div id="virtualisation" class="section level2">
 <h2>Virtualisation</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>rrtools<span class="op">::</span><span class="kw">use_dockerfile</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>rrtools<span class="op">::</span><span class="kw">use_dockerfile</span>()</span></code></pre></div>
 </div>
 <div id="cicd" class="section level2">
 <h2>CI/CD</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>rrtools<span class="op">::</span><span class="kw">use_travis</span>(<span class="dt">docker =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>rrtools<span class="op">::</span><span class="kw">use_travis</span>(<span class="dt">docker =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
 </div>
 <div id="unit-tests" class="section level2">
 <h2>Unit tests</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
 </div>
 </div>
 </div>

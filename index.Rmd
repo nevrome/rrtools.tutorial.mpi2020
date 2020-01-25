@@ -158,7 +158,7 @@ Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/proj
 
 [Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)'s a cheatsheet that documents all basic Markdown features.
 
-Text written in Markdown can **easily converted** to more advanced layout systems like HTML or LaTex. This website is written in Markdown.
+Text written in Markdown can **easily converted** to more advanced layout systems like HTML or LaTex or MS Word. This website is written in Markdown.
 
 [RMarkdown](https://rmarkdown.rstudio.com/) is an advanced implementation of Markdown that allows to **combine text and code**. It adds the possibility to define chunks of code that run when the document is rendered.
 
@@ -194,82 +194,77 @@ mypackage/
 </div>
 </div>
 
-# rrtools
+# rrtools setup
 
 <div class="gallery">
 <div>
 
 ## Create an R package
 
-```{r}
-rrtools::use_compendium("pkgname")
-```
+If rrtools is installed on your system you can start immediately to use it in R.
 
-This uses `usethis::create_package()` to create a basic R package with the name `pkgname`, and then, if you’re using RStudio, opens the project. 
+`r astro()``r rocket()` run `rrtools::use_compendium("path/to/your/project")` to create a basic R package with the name `project`
 
-ToDo:
-
-- choose a location for the compendium package and run `rrtools::use_compendium()` (e.g. `rrtools::use_compendium("C:/Users/bmarwick/Desktop/pkgname")`).
-- edit the `DESCRIPTION` file (located in your `pkgname` directory) to include accurate metadata
+`r astro()``r rocket()` edit the `DESCRIPTION` file (located in your `project` directory) to include accurate metadata
     
-Keep in mind for the future:
-
-- periodically update the `Imports:` section of the `DESCRIPTION` file with the names of packages used in the code we write in the Rmd document(s) (e.g., `usethis::use_package("dplyr", "imports")`)
+For the future keep in mind to periodically update the `Imports:` section of the `DESCRIPTION` file with the names of packages used in the code we write in the Rmd document(s)
 
 </div>
 <div>
 
 ## Activate version control
 
-```{r}
-usethis::use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
-usethis::use_git()
-usethis::browse_github_pat()
-usethis::edit_r_environ()
-usethis::use_github(protocol = "https", private = FALSE)
-```
+`r astro()``r rocket()` run `usethis::use_git_config(user.name = "", user.email = "")` to configure git for this user/project
 
-If you are connected to the internet, this initializes a local git repository (`use_git()`), then `use_github()` connects to [GitHub](https://github.com), and creates a remote repository 
+`r astro()``r rocket()` run `usethis::use_git()` to initiate git for this project (`git init`)
 
-ToDo:
+`r astro()``r rocket()` run `usethis::browse_github_pat()` to get to the right page to create a github access token. This access token is needed to control github remotely. When you generate the token (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere
 
-- install and configure git *before* running this line. See [Happy Git With R](http://happygitwithr.com) for details on how to do this. Make sure to set up a [SSH key](https://happygitwithr.com/ssh-keys.html) to connect to your Github account conveniently.
-- get a [personal access token](https://github.com/settings/tokens), and replace “xxxx” with that token. See the [usethis](https://usethis.r-lib.org/articles/articles/usethis-setup.html#get-and-store-a-github-personal-access-token) documentation for an easy method to get this token. When you do so (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere.
-- Reopen your project in RStudio to see the git buttons on the toolbar.
-
-Keep in mind for the future:
-
-- Commit and push your changes to Github.
+`r astro()``r rocket()` run `usethis::use_github(protocol = "https", auth_token = "your token")` to create a repository for your local project on Github
 
 </div>
 <div>
 
 ## Establish the compendium file structure
 
-```{r}
-rrtools::use_analysis()
+`r astro()``r rocket()` run `rrtools::use_analysis()` to create the basic files and directory structure and transform this R package into a research compendium
+
+```
+analysis/
+|
+├── paper/
+│   ├── paper.Rmd       # this is the main document to edit
+│   └── references.bib  # this contains the reference list information
+│
+├── figures/            # location of the figures produced by the Rmd
+|
+├── data/
+│   ├── raw_data/       # data obtained from elsewhere
+│   └── derived_data/   # data generated during the analysis
+|
+└── templates
+    ├── journal-of-archaeological-science.csl
+    |                   # this sets the style of citations & reference list
+    ├── template.docx   # used to style the output of the paper.Rmd
+    └── template.Rmd
 ```
 
 </div>
-<div>
-
-## Start writing
-
-Starting to write some text with RMarkdown
-
-</div>
 </div>
 
-
-
-# Advanced aspects
+# rrtools workflow
 
 <div class="gallery">
 <div>
 
-## Long-term data storage
+
 
 </div>
+</div>
+
+# rrtools advanced
+
+<div class="gallery">
 <div>
 
 ## README, Code of Conduct and Contribution
