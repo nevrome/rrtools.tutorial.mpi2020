@@ -250,6 +250,10 @@ analysis/
     └── template.Rmd
 ```
 
+`r astro()``r rocket()`
+
+take a look at the `paper.Rmd` file, render it with the `Knit` button of RStudio and inspect the resulting `.docx` file
+
 </div>
 </div>
 
@@ -258,7 +262,49 @@ analysis/
 <div class="gallery">
 <div>
 
+## Collect some data
 
+`r astro()``r rocket()`
+
+create a file `names.txt` in `./analysis/raw_data` that contains the first names of some of the people around you
+
+```
+Paul
+Hannah
+Anne
+Maxime
+Clemens
+```
+
+</div>
+<div>
+
+## Add an R function to analyse and plot this data
+
+`r astro()``r rocket()`
+
+create a file `plot_name_dist_matrix.R` in `./R` to define an R function
+
+```{r}
+#' Calculate Levenshtein distance between strings in the input vector
+#'
+#' @param x A character vector
+#'
+#' @return Nothing. Only called for the plot
+#' @export
+plot_name_dist_matrix <- function(x) {
+  # calculate distances
+  dist_matrix <- as.matrix(stringdist::stringdistmatrix(x, method = "lv"))
+  # plot
+  image(dist_matrix, axes = FALSE)
+  axis(1, at = seq(0, 1, length = length(x)), labels = x)
+  axis(2, at = seq(0, 1, length = length(x)), labels = x)
+  text(
+    expand.grid(seq(0, 1, length = length(x)), seq(0, 1, length = length(x))),
+    labels = dist_matrix
+  )
+}
+```
 
 </div>
 </div>

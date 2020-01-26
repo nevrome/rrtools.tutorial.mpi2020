@@ -1895,14 +1895,61 @@ Github: <a href="https://github.com/nevrome/rrtools.tutorial.mpi2020" class="uri
     |                   # this sets the style of citations &amp; reference list
     ├── template.docx   # used to style the output of the paper.Rmd
     └── template.Rmd</code></pre>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>take a look at the <code>paper.Rmd</code> file, render it with the <code>Knit</code> button of RStudio and inspect the resulting <code>.docx</code> file</p>
 </div>
 </div>
 </div>
 <div id="rrtools-workflow" class="section level1">
 <h1>rrtools workflow</h1>
 <div class="gallery">
-<div>
-
+<div id="collect-some-data" class="section level2">
+<h2>Collect some data</h2>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>create a file <code>names.txt</code> in <code>./analysis/raw_data</code> that contains the first names of some of the people around you</p>
+<pre><code>Paul
+Hannah
+Anne
+Maxime
+Clemens</code></pre>
+</div>
+<div id="add-an-r-function-to-analyse-and-plot-this-data" class="section level2">
+<h2>Add an R function to analyse and plot this data</h2>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 448 512">
+<path d="M64 224h13.5c24.7 56.5 80.9 96 146.5 96s121.8-39.5 146.5-96H384c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16h-13.5C345.8 39.5 289.6 0 224 0S102.2 39.5 77.5 96H64c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16zm40-88c0-22.1 21.5-40 48-40h144c26.5 0 48 17.9 48 40v24c0 53-43 96-96 96h-48c-53 0-96-43-96-96v-24zm72 72l12-36 36-12-36-12-12-36-12 36-36 12 36 12 12 36zm151.6 113.4C297.7 340.7 262.2 352 224 352s-73.7-11.3-103.6-30.6C52.9 328.5 0 385 0 454.4v9.6c0 26.5 21.5 48 48 48h80v-64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v64h80c26.5 0 48-21.5 48-48v-9.6c0-69.4-52.9-125.9-120.4-133zM272 448c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16v48h32v-48c0-8.8-7.2-16-16-16z"></path>
+</svg>
+<svg style="height:30;fill:#c7254e;" viewBox="0 0 512 512">
+<path d="M505.05 19.1a15.89 15.89 0 0 0-12.2-12.2C460.65 0 435.46 0 410.36 0c-103.2 0-165.1 55.2-211.29 128H94.87A48 48 0 0 0 52 154.49l-49.42 98.8A24 24 0 0 0 24.07 288h103.77l-22.47 22.47a32 32 0 0 0 0 45.25l50.9 50.91a32 32 0 0 0 45.26 0L224 384.16V488a24 24 0 0 0 34.7 21.49l98.7-49.39a47.91 47.91 0 0 0 26.5-42.9V312.79c72.59-46.3 128-108.4 128-211.09.1-25.2.1-50.4-6.85-82.6zM384 168a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+</svg>
+<p>create a file <code>plot_name_dist_matrix.R</code> in <code>./R</code> to define an R functions</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="co">#&#39; Calculate Levenshtein distance between strings in the input vector</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="co">#&#39;</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co">#&#39; @param x A character vector</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#&#39;</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">#&#39; @return Nothing. Only called for the plot</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co">#&#39; @export</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>plot_name_dist_matrix &lt;-<span class="st"> </span><span class="cf">function</span>(x) {</span>
+<span id="cb6-8"><a href="#cb6-8"></a>  <span class="co"># calculate distances</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  dist_matrix &lt;-<span class="st"> </span><span class="kw">as.matrix</span>(stringdist<span class="op">::</span><span class="kw">stringdistmatrix</span>(x, <span class="dt">method =</span> <span class="st">&quot;lv&quot;</span>))</span>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="co"># plot</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a>  <span class="kw">image</span>(dist_matrix, <span class="dt">axes =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb6-12"><a href="#cb6-12"></a>  <span class="kw">axis</span>(<span class="dv">1</span>, <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="kw">length</span>(x)), <span class="dt">labels =</span> x)</span>
+<span id="cb6-13"><a href="#cb6-13"></a>  <span class="kw">axis</span>(<span class="dv">2</span>, <span class="dt">at =</span> <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="kw">length</span>(x)), <span class="dt">labels =</span> x)</span>
+<span id="cb6-14"><a href="#cb6-14"></a>  <span class="kw">text</span>(</span>
+<span id="cb6-15"><a href="#cb6-15"></a>    <span class="kw">expand.grid</span>(<span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="kw">length</span>(x)), <span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="kw">length</span>(x))),</span>
+<span id="cb6-16"><a href="#cb6-16"></a>    <span class="dt">labels =</span> dist_matrix</span>
+<span id="cb6-17"><a href="#cb6-17"></a>  )</span>
+<span id="cb6-18"><a href="#cb6-18"></a>}</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -1911,23 +1958,23 @@ Github: <a href="https://github.com/nevrome/rrtools.tutorial.mpi2020" class="uri
 <div class="gallery">
 <div id="readme-code-of-conduct-and-contribution" class="section level2">
 <h2>README, Code of Conduct and Contribution</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>rrtools<span class="op">::</span><span class="kw">use_readme_rmd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>rrtools<span class="op">::</span><span class="kw">use_readme_rmd</span>()</span></code></pre></div>
 </div>
 <div id="licensing" class="section level2">
 <h2>Licensing</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>usethis<span class="op">::</span><span class="kw">use_mit_license</span>(<span class="dt">name =</span> <span class="st">&quot;My Name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>usethis<span class="op">::</span><span class="kw">use_mit_license</span>(<span class="dt">name =</span> <span class="st">&quot;My Name&quot;</span>)</span></code></pre></div>
 </div>
 <div id="virtualisation" class="section level2">
 <h2>Virtualisation</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>rrtools<span class="op">::</span><span class="kw">use_dockerfile</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>rrtools<span class="op">::</span><span class="kw">use_dockerfile</span>()</span></code></pre></div>
 </div>
 <div id="cicd" class="section level2">
 <h2>CI/CD</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>rrtools<span class="op">::</span><span class="kw">use_travis</span>(<span class="dt">docker =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>rrtools<span class="op">::</span><span class="kw">use_travis</span>(<span class="dt">docker =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
 </div>
 <div id="unit-tests" class="section level2">
 <h2>Unit tests</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
 </div>
 </div>
 </div>
