@@ -250,6 +250,11 @@ analysis/
     └── template.Rmd
 ```
 
+</div>
+<div>
+
+## Inspect the manuscript
+
 `r astro()``r rocket()`
 
 take a look at the `paper.Rmd` file, render it with the `Knit` button of RStudio and inspect the resulting `.docx` file
