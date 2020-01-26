@@ -307,6 +307,27 @@ plot_name_dist_matrix <- function(x) {
 ```
 
 </div>
+<div>
+
+## Incorporate data and code into the manuscript
+
+`r astro()``r rocket()`
+
+edit `./analysis/paper/paper.Rmd` to include our analysis in a R code chunk
+
+```{r}
+names_vector <- readLines(here::here("analysis/data/raw_data/names.txt"))
+
+devtools::load_all()
+
+plot_name_dist_matrix(names_vector)
+```
+
+`r astro()``r rocket()`
+
+render `paper.Rmd` again to see the result
+
+</div>
 </div>
 
 # rrtools advanced
