@@ -31,7 +31,7 @@ Github: https://github.com/nevrome/rrtools.tutorial.mpi2020
 
 ![](figures/Data-Managerment-title-slide-16-9.jpg)
 
-This tutorial was compiled by [Clemens Schmid]() for a [workshop on reproducible research and data management at MPI-SHH](https://rrdm-shh.github.io) in January 2020. It's based on and inspired by two workshops prepared by [Ben Marwick](http://faculty.washington.edu/bmarwick/) for the [SAA2019 conference](https://benmarwick.github.io/2019-04-10-saa/) and [Brown University Digital Archaeology Lab](https://benmarwick.github.io/2019-12-09-brown/).
+This tutorial was compiled by [Clemens Schmid](https://nevrome.de/) for a [workshop on reproducible research and data management at MPI-SHH](https://rrdm-shh.github.io) in January 2020. It's based on and inspired by two workshops prepared by [Ben Marwick](http://faculty.washington.edu/bmarwick/) for the [SAA2019 conference](https://benmarwick.github.io/2019-04-10-saa/) and [Brown University Digital Archaeology Lab](https://benmarwick.github.io/2019-12-09-brown/).
 
 # The Research Compendium
 
