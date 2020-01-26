@@ -19,10 +19,10 @@ editor_options:
 knitr::opts_chunk$set(eval = FALSE)
 
 astro <- function() {
-  fontawesome::fa("user-astronaut", fill = "#c7254e", height = 30)
+  fontawesome::fa("user-astronaut", fill = "#c7254e")
 }
 rocket <- function() {
-  fontawesome::fa("rocket", fill = "#c7254e", height = 30)
+  fontawesome::fa("rocket", fill = "#c7254e")
 }
 ```
 
