@@ -257,7 +257,7 @@ analysis/
 
 `r astro()``r rocket()`
 
-take a look at the `paper.Rmd` file, render it with the `Knit` button of RStudio and inspect the resulting `.docx` file
+take a look at the `./analysis/paper/paper.Rmd` file, render it with the `Knit` button of RStudio and inspect the resulting `.docx` file
 
 </div>
 </div>
@@ -314,16 +314,33 @@ plot_name_dist_matrix <- function(x) {
 </div>
 <div>
 
+## Make this function available in the manuscript file
+
+`r astro()``r rocket()`
+
+### The lazy way
+
+add a call to a function at the beginning of the `paper.Rmd` file that simply loads every function in the package
+
+```{r}
+devtools::load_all()
+```
+
+### The knigths of R way
+
+build the package documentation (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>) and install the package (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>)
+
+</div>
+<div>
+
 ## Incorporate data and code into the manuscript
 
 `r astro()``r rocket()`
 
-edit `./analysis/paper/paper.Rmd` to include our analysis in a R code chunk
+edit `./analysis/paper/paper.Rmd` to include our analysis in an R code chunk
 
 ```{r}
 names_vector <- readLines(here::here("analysis/data/raw_data/names.txt"))
-
-devtools::load_all()
 
 plot_name_dist_matrix(names_vector)
 ```
