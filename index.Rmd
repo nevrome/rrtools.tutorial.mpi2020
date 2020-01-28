@@ -359,18 +359,37 @@ render `paper.Rmd` again to see the result
 
 ## README, Code of Conduct and Contribution
 
-```{r}
-rrtools::use_readme_rmd()
-```
+Beyond the bare code an established open source software project in the 21st century should have at least the following three things:
+
+- A `README.md` file that gives a minimal description what this project is about, how it can be used and who made it
+- A guide how to contribute to this project `CONTRIBUTING.md`
+- A code of conduct that defines which behaviour we expect from participants: `CONDUCT.md`
+
+These documentation files are valuable for your Research Compendium as well.
+
+`r astro()``r rocket()`
+
+run `rrtools::use_readme_rmd()` to create these files and inspect them
 
 </div>
 <div>
 
 ## Licensing
 
-```{r}
-usethis::use_mit_license(name = "My Name")
-```
+Code and data (!) in a Research Repository should come with license declaration that declare the copyright holder and what can and can not be done legally with your intellectual property.
+
+Sometimes it's not easy to decide which of the established licenses fits your purpose best. There are websites that give you an overview, e.g. https://choosealicense.com/, but real legal advice is always recommended.
+
+`r astro()``r rocket()`
+
+test one of the following functions and see what it does
+
+`usethis::use_mit_license(name = "your name")`
+`usethis::use_gpl3_license(name = "your name")`
+`usethis::use_lgpl_license(name = "your name")`
+`usethis::use_apl2_license(name = "your name")`
+`usethis::use_cc0_license(name = "your name")`
+`usethis::use_ccby_license(name = "your name")`
 
 </div>
 <div>
