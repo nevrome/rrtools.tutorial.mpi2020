@@ -419,14 +419,15 @@ An example: https://github.com/nevrome/cultrans.bronzeageburials.article2019
 </div>
 <div>
 
-</div>
-<div>
-
 ## Unit tests
 
-```{r}
-usethis::use_testthat()
-```
+If the code in your compendium becomes more and more complex and you maintain a significant number of functions in the `R/` directory, it might be useful to establish [unit tests](http://r-pkgs.had.co.nz/tests.html).
+
+Unit tests reduce the number of bugs, force you to structure your code in a better way and make it overall more robust. 
+
+`usethis::use_testthat()` adds the main components to get you started.
+
+An example: https://github.com/ropensci/c14bazAAR
 
 </div>
 </div>

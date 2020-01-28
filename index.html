@@ -2030,7 +2030,7 @@ Clemens</code></pre>
 <div id="cicd" class="section level2">
 <h2>CI/CD</h2>
 <p>To test your workflow on another, independent system or to outsource some document processing steps you can work with services that provide on-the-fly virtual machines.</p>
-<p><code>rrtools::use_travis(docker = FALSE)</code> creates a configuration file (<code>.travis.yml</code>) for the TravisCI service which you can directly link to your Github account.</p>
+<p><code>rrtools::use_travis(docker = FALSE)</code> creates a configuration file (<code>.travis.yml</code>) for the TravisCI service which you can directly link to your Github repository.</p>
 <p>An example: <a href="https://github.com/ISAAKiel/recexcavAAR" class="uri">https://github.com/ISAAKiel/recexcavAAR</a><br />
 And another example: <a href="https://github.com/nevrome/neomod_textdev" class="uri">https://github.com/nevrome/neomod_textdev</a></p>
 </div>
@@ -2041,12 +2041,12 @@ And another example: <a href="https://github.com/nevrome/neomod_textdev" class="
 <p>You can start to set this up with <code>rrtools::use_dockerfile()</code>, which creates default configuration file (<code>Dockerfile</code>), but it requires some further considerations.</p>
 <p>An example: <a href="https://github.com/nevrome/cultrans.bronzeageburials.article2019" class="uri">https://github.com/nevrome/cultrans.bronzeageburials.article2019</a></p>
 </div>
-<div>
-
-</div>
 <div id="unit-tests" class="section level2">
 <h2>Unit tests</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
+<p>If the code in your compendium becomes more and more complex and you maintain a significant number of functions in the <code>R/</code> directory, it might be useful to establish <a href="http://r-pkgs.had.co.nz/tests.html">unit tests</a>.</p>
+<p>Unit tests reduce the number of bugs, force you to structure your code in a better way and make it overall more robust.</p>
+<p><code>usethis::use_testthat()</code> adds the main components to get you started.</p>
+<p>An example: <a href="https://github.com/ropensci/c14bazAAR" class="uri">https://github.com/ropensci/c14bazAAR</a></p>
 </div>
 </div>
 </div>
