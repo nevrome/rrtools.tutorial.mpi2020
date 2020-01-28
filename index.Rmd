@@ -394,20 +394,30 @@ test one of the following functions and see what it does
 </div>
 <div>
 
-## Virtualisation
+## CI/CD
 
-```{r}
-rrtools::use_dockerfile()
-```
+To test your workflow on another, independent system or to outsource some document processing steps you can work with services that provide on-the-fly virtual machines. 
+
+`rrtools::use_travis(docker = FALSE)` creates a configuration file (`.travis.yml`) for the TravisCI service which you can directly link to your Github repository.
+
+An example: https://github.com/ISAAKiel/recexcavAAR  
+And another example: https://github.com/nevrome/neomod_textdev
 
 </div>
 <div>
 
-## CI/CD
+## Virtualisation
 
-```{r}
-rrtools::use_travis(docker = FALSE)
-```
+To go beyond CI and to make our computational workflow completely independent of version changes in the software we use, we have to encapsulate it in a virtual environment, that simulates a computer with exactly the right software.
+
+A good solution for this is the [Docker container system](https://docs.docker.com/get-started/). 
+
+You can start to set this up with `rrtools::use_dockerfile()`, which creates default configuration file (`Dockerfile`), but it requires some further considerations.
+
+An example: https://github.com/nevrome/cultrans.bronzeageburials.article2019
+
+</div>
+<div>
 
 </div>
 <div>

@@ -2027,17 +2027,26 @@ Clemens</code></pre>
 <p>test one of the following functions and see what it does</p>
 <p><code>usethis::use_mit_license(name = &quot;your name&quot;)</code> <code>usethis::use_gpl3_license(name = &quot;your name&quot;)</code> <code>usethis::use_lgpl_license(name = &quot;your name&quot;)</code> <code>usethis::use_apl2_license(name = &quot;your name&quot;)</code> <code>usethis::use_cc0_license(name = &quot;your name&quot;)</code> <code>usethis::use_ccby_license(name = &quot;your name&quot;)</code></p>
 </div>
-<div id="virtualisation" class="section level2">
-<h2>Virtualisation</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>rrtools<span class="op">::</span><span class="kw">use_dockerfile</span>()</span></code></pre></div>
-</div>
 <div id="cicd" class="section level2">
 <h2>CI/CD</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>rrtools<span class="op">::</span><span class="kw">use_travis</span>(<span class="dt">docker =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<p>To test your workflow on another, independent system or to outsource some document processing steps you can work with services that provide on-the-fly virtual machines.</p>
+<p><code>rrtools::use_travis(docker = FALSE)</code> creates a configuration file (<code>.travis.yml</code>) for the TravisCI service which you can directly link to your Github account.</p>
+<p>An example: <a href="https://github.com/ISAAKiel/recexcavAAR" class="uri">https://github.com/ISAAKiel/recexcavAAR</a><br />
+And another example: <a href="https://github.com/nevrome/neomod_textdev" class="uri">https://github.com/nevrome/neomod_textdev</a></p>
+</div>
+<div id="virtualisation" class="section level2">
+<h2>Virtualisation</h2>
+<p>To go beyond CI and to make our computational workflow completely independent of version changes in the software we use, we have to encapsulate it in a virtual environment, that simulates a computer with exactly the right software.</p>
+<p>A good solution for this is the <a href="https://docs.docker.com/get-started/">Docker container system</a>.</p>
+<p>You can start to set this up with <code>rrtools::use_dockerfile()</code>, which creates default configuration file (<code>Dockerfile</code>), but it requires some further considerations.</p>
+<p>An example: <a href="https://github.com/nevrome/cultrans.bronzeageburials.article2019" class="uri">https://github.com/nevrome/cultrans.bronzeageburials.article2019</a></p>
+</div>
+<div>
+
 </div>
 <div id="unit-tests" class="section level2">
 <h2>Unit tests</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>usethis<span class="op">::</span><span class="kw">use_testthat</span>()</span></code></pre></div>
 </div>
 </div>
 </div>
