@@ -155,15 +155,12 @@ If you never worked with R, you can use [swirl](https://swirlstats.com/students.
 ## RStudio
 
 `r astro()``r rocket()`
-
 Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/spaces/49056/join?access_code=TO1DZn5WUKxm1Bo1xn7hjm7GYwWxxOs9vU4yyvI9).
 
 `r astro()``r rocket()`
-
 Inspect the RStudio interface.
 
 `r astro()``r rocket()`
-
 Open an R code file, add some code (`1 + 1`), select it and run it in the R console with <kbd>ctrl</kbd> + <kbd>enter</kbd>.
 
 </div>
@@ -195,7 +192,6 @@ Text written in Markdown can **easily converted** to more advanced layout system
 ## R Markdown
 
 `r astro()``r rocket()`
-
 Open an Rmarkdown file based on the default RStudio template, inspect it and render it with the <kbd>Knit</kbd> button.
 
 </div>
@@ -235,7 +231,7 @@ An example: https://github.com/nevrome/bleiglas
 
 ## rrtools
 
-[rrtools](https://github.com/benmarwick/rrtools) is a **mighty wizard** package witten by Ben Marwick and colleagues that facilitates some of the steps of Research Compendium creation and maintenance. It has a **lot of dependencies** and it is **strongly opinionated**.
+[rrtools](https://github.com/benmarwick/rrtools) is a **mighty wizard** package written by Ben Marwick and colleagues that facilitates some of the steps of Research Compendium creation and maintenance. It has a **lot of dependencies** and it is **strongly opinionated**.
 
 ![](figures/screenshot_rrtools.png)
 
@@ -246,24 +242,42 @@ An example: https://github.com/nevrome/bleiglas
 
 If rrtools is installed on your system you can start immediately to use it in R.
 
-`r astro()``r rocket()` run `rrtools::use_compendium("path/to/your/project")` to create a basic R package with the name `project`
+`r astro()``r rocket()` 
+Run `rrtools::use_compendium("~/test/mycompendium")` to create a basic R package with the name `project`.
 
-`r astro()``r rocket()` edit the `DESCRIPTION` file (located in your `project` directory) to include accurate metadata
-    
-For the future keep in mind to periodically update the `Imports:` section of the `DESCRIPTION` file with the names of packages used in the code we write in the Rmd document(s)
+`r astro()``r rocket()` 
+Inspect both the command output in the old and the new RStudio session.
+
+`r astro()``r rocket()` 
+Inspect the compendium file structure.
+
+`r astro()``r rocket()` 
+Edit the `DESCRIPTION` file (located in your `project` directory) to include some better metadata.
+
+For the future keep in mind to periodically update the `Imports:` section of the `DESCRIPTION` file with the names of packages used in the code we write in `/R` and the Rmd document(s).
 
 </div>
 <div>
 
 ## Activate version control
 
-`r astro()``r rocket()` run `usethis::use_git_config(user.name = "", user.email = "")` to configure git for this user/project
+`r astro()``r rocket()` 
+<strike>Run `usethis::use_git_config(user.name = "", user.email = "")` to configure git.</strike>
 
-`r astro()``r rocket()` run `usethis::use_git()` to initiate git for this project (`git init`)
+`r astro()``r rocket()` 
+Run `usethis::use_git()` to initiate git for this project (`git init`). Follow the command line instruction of this function. 
 
-`r astro()``r rocket()` run `usethis::browse_github_pat()` to get to the right page to create a github access token. This access token is needed to control github remotely. When you generate the token (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere
+`r astro()``r rocket()` 
+Inspect the new <kbd>Git</kbd> tab in the top right RStudio panel.
 
-`r astro()``r rocket()` run `usethis::use_github(protocol = "https", auth_token = "your token")` to create a repository for your local project on Github
+`r astro()``r rocket()` 
+Run `usethis::browse_github_pat()` to get to the right page to create a github access token. This access token is needed to control Github remotely. When you generate the token (click “Generate new token”), make sure the “repo” scope is included by checking the “repo” box. Don’t save this token in your project, keep it elsewhere.
+
+`r astro()``r rocket()` 
+Run `usethis::use_github(protocol = "ssh", auth_token = "your token")` to create a repository for your local project on Github.
+
+`r astro()``r rocket()`
+Test your Git + Github setup by editing the DESCRIPTION file ones more and by pushing the result.
 
 </div>
 <div>
