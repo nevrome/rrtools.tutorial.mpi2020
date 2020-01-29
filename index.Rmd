@@ -149,9 +149,22 @@ If you never worked with R, you can use [swirl](https://swirlstats.com/students.
 
 ![](figures/screenshot_rstudio.png)
 
+</div>
+<div>
+
+## RStudio
+
 `r astro()``r rocket()`
 
-Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/spaces/49056/join?access_code=TO1DZn5WUKxm1Bo1xn7hjm7GYwWxxOs9vU4yyvI9)
+Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/spaces/49056/join?access_code=TO1DZn5WUKxm1Bo1xn7hjm7GYwWxxOs9vU4yyvI9).
+
+`r astro()``r rocket()`
+
+Inspect the RStudio interface.
+
+`r astro()``r rocket()`
+
+Open an R code file, add some code (`1 + 1`), select it and run it in the R console with <kbd>ctrl</kbd> + <kbd>enter</kbd>.
 
 </div>
 <div>
@@ -172,11 +185,18 @@ Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/spac
 
 [Here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)'s a cheatsheet that documents all basic Markdown features.
 
-Text written in Markdown can **easily converted** to more advanced layout systems like HTML or LaTex or MS Word. This website is written in Markdown.
+Text written in Markdown can **easily converted** to more advanced layout systems like **HTML** or **LaTex** or **MS Word**. This website is written in Markdown.
 
 [RMarkdown](https://rmarkdown.rstudio.com/) is an advanced implementation of Markdown that allows to **combine text and code**. It adds the possibility to define chunks of code that run when the document is rendered.
 
+</div>
+<div>
+
+## R Markdown
+
 `r astro()``r rocket()`
+
+Open an Rmarkdown file based on the default RStudio template, inspect it and render it with the <kbd>Knit</kbd> button.
 
 </div>
 <div>
@@ -194,14 +214,14 @@ mypackage/
 ├── R/                  # R code
 ├── man/                # Function documentation
 ├── NAMESPACE/          # Exported names
-|
 ├── vignettes/          # Extended documentation
 ├── data/               # (Example) data
-|
 ├── tests/              # Unit tests
 ├── src/                # Compiled language code
 └── inst/               # Arbitrary, additional files
 ```
+
+An example: https://github.com/nevrome/bleiglas
 
 [Here](http://r-pkgs.had.co.nz/)'s an excellent introduction if you want to create an own package.
 
@@ -211,6 +231,15 @@ mypackage/
 # rrtools setup
 
 <div class="gallery">
+<div>
+
+## rrtools
+
+[rrtools](https://github.com/benmarwick/rrtools) is a **mighty wizard** package witten by Ben Marwick and colleagues that facilitates some of the steps of Research Compendium creation and maintenance. It has a **lot of dependencies** and it is **strongly opinionated**.
+
+![](figures/screenshot_rrtools.png)
+
+</div>
 <div>
 
 ## Create an R package
