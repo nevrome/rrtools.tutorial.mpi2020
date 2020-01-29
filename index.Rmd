@@ -335,8 +335,7 @@ Render it with the <kbd>Knit</kbd> button and inspect the resulting `.docx` file
 ## Collect some data
 
 `r astro()``r rocket()`
-
-create a file `names.txt` in `./analysis/raw_data` that contains the first names of some of the people around you
+Create a file `names.txt` in `./analysis/data/raw_data` that contains the first names of some of the people around you.
 
 ```
 Paul
@@ -352,8 +351,7 @@ Clemens
 ## Add an R function to analyse and plot this data
 
 `r astro()``r rocket()`
-
-create a file `plot_name_dist_matrix.R` in `./R` to define an R function
+Create a file `plot_name_dist_matrix.R` in `./R` to define an R function.
 
 ```{r}
 #' Calculate Levenshtein distance between strings in the input vector
@@ -385,7 +383,7 @@ plot_name_dist_matrix <- function(x) {
 
 ### The lazy way
 
-add a call to a function at the beginning of the `paper.Rmd` file that simply loads every function in the package
+Add a call to a function at the beginning of the `paper.Rmd` file that simply loads every function in the package:
 
 ```{r}
 devtools::load_all()
@@ -393,7 +391,7 @@ devtools::load_all()
 
 ### The knigths of R way
 
-build the package documentation (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>) and install the package (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>)
+Build the package documentation (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>) and install the package (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>).
 
 </div>
 <div>
@@ -401,18 +399,16 @@ build the package documentation (<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>) 
 ## Incorporate data and code into the manuscript
 
 `r astro()``r rocket()`
-
-edit `./analysis/paper/paper.Rmd` to include our analysis in an R code chunk
+Edit `./analysis/paper/paper.Rmd` to include our analysis in an R code chunk with the chunk options `{r, fig.width = 10, fig.height=10}`.
 
 ```{r}
 names_vector <- readLines(here::here("analysis/data/raw_data/names.txt"))
 
-plot_name_dist_matrix(names_vector)
+mycompendium::plot_name_dist_matrix(names_vector)
 ```
 
 `r astro()``r rocket()`
-
-render `paper.Rmd` again to see the result
+Render `paper.Rmd` again to see the result.
 
 </div>
 </div>
