@@ -48,7 +48,7 @@ A research compendium contains **relevant information** to make the **scientific
 
 Ideally it contains **all** **data**, **code** and **text** necessary to compile the published document. 
 
-This might be **difficult sometimes** due to raw data or text publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce. 
+This might be **difficult sometimes** due to raw data size, publishing **restrictions** or parts of the workflow that are **not quantitative** or inherently impossible to reproduce.
 
 The term research compendium therefore covers a whole **range of imaginable degrees of completeness**.
 
@@ -59,7 +59,9 @@ The term research compendium therefore covers a whole **range of imaginable degr
 
 Research can only be **reproduced**, **checked** and **expanded** when underlying raw data is available.
 
-Data sharing is a **moral obligation** and **non-trivial**. Marwick & Birch 2018 have some recommendations:
+Data sharing is a **moral obligation** and **non-trivial**. 
+
+Marwick & Birch 2018 have some recommendations:
 
 - Anticipate how your data will be used
 - Keep raw data **raw**
@@ -81,6 +83,17 @@ In most contexts of **quantitative research** data analysis can be expressed in 
 **Computational reproducibility** is an important foundation of scientific progress, that requires a **new type of researcher**:
 
 ![](figures/marwick_T_Pi_researcher.png)
+
+</div>
+<div>
+
+## Text
+
+Text can be integrated with data and code to be more **interlinked**, **transparent** and **didactically powerful**: 
+
+This can preciscly answer questions like **"106 samples? Where is this number coming from?"**. Hopefully not `round(runif(1) * 200)`, but solid algorithms like `number_of_samples_with_raikenburg_treatment()`.
+
+In the future **interactive documents** may become more popular: e.g. Shiny Documents (https://github.com/nevrome/neiman1995)
 
 </div>
 <div>
