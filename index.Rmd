@@ -135,7 +135,7 @@ horse1 %dance% horse2
 
 1. It is an easy to learn programming language with a huge community in science.
 2. It is supported by an advanced working environment: **RStudio** 
-3. it allows for direct integration of code and text: **RMarkdown**
+3. It allows for direct integration of code and text: **RMarkdown**
 4. It offers an established data structure to manage code, data and text: the **R package**
 
 If you never worked with R, you can use [swirl](https://swirlstats.com/students.html) to learn the basics.
@@ -151,7 +151,7 @@ If you never worked with R, you can use [swirl](https://swirlstats.com/students.
 
 `r astro()``r rocket()`
 
-Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/project/848043)
+Open RStudio or log into this [RStudio Cloud session](https://rstudio.cloud/spaces/49056/join?access_code=TO1DZn5WUKxm1Bo1xn7hjm7GYwWxxOs9vU4yyvI9)
 
 </div>
 <div>
