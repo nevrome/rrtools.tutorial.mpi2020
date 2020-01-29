@@ -429,21 +429,22 @@ Beyond the bare code an established open source software project in the 21st cen
 These documentation files are valuable for your research compendium as well.
 
 `r astro()``r rocket()`
+Run `rrtools::use_readme_rmd()` to create these files and inspect them.
 
-run `rrtools::use_readme_rmd()` to create these files and inspect them
+`r astro()``r rocket()`
+Render the `README.Rmd` file to a `README.md` file. Why is this intermediate step necessary?
 
 </div>
 <div>
 
 ## Licensing
 
-Code and data (!) in a Research Repository should come with license declaration that declare the copyright holder and what can and can not be done legally with your intellectual property.
+Code and data (!) in a research repository should come with a license declaration that declares the copyright holder and what can and can not be done legally with your intellectual property.
 
-Sometimes it's not easy to decide which of the established licenses fits your purpose best. There are websites that give you an overview, e.g. https://choosealicense.com/, but real legal advice is always recommended.
+Sometimes it's not easy to decide which of the established licenses fits your purpose best. There are websites that give you an overview, e.g. https://choosealicense.com, but real legal advice is always recommended.
 
 `r astro()``r rocket()`
-
-test one of the following functions and see what it does
+Test one of the following functions and see what it does.
 
 `usethis::use_mit_license(name = "your name")`
 `usethis::use_gpl3_license(name = "your name")`
